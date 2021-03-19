@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Edit Details for @Model.EngineerName </h2>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(engineer => engineer.EngineerId);
+  @Html.LabelFor(engineer => engineer.EngineerName)
+  @Html.TextBoxFor(engineer => engineer.EngineerName);
+
+  <button class="btn btn-success" type="submit">Edit Details</button>
+}
+
+<button class="btn btn-dark">@Html.ActionLink("Back To Engineer List", "Index")</button>
