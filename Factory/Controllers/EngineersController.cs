@@ -69,6 +69,7 @@ namespace Factory.Controllers
       Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
       return View(thisEngineer);
     }
+    
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
