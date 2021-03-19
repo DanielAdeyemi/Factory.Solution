@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.Linq;
 using Factory.Models;
@@ -21,6 +22,7 @@ namespace Factory.Controllers
 
     public ActionResult Create()
     {
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "MachineName");
       return View();
     }
   }
