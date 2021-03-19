@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer;
+
+<h3>Machines @Model.EngineerName has licence to repair: </h3>
+<hr />
+@if (Model.JoinEntities.Count == 0)
+{
+  <h5>@Model.EngineerName doesn't have any licences yet.</h5>    
+}
+else
+{
+  <ul>
+    @foreach (var join in Model.JoinEntities)
+    {
+      <li>@join.Machine.MachineName</li>
+    }
+  </ul>
+}
+
+
+<button class="btn btn-info">@Html.ActionLink("Back to list of Engineers", "Index")</button>
+<button class="btn btn-danger">@Html.ActionLink("Remove this engineer", "Delete", new { id = Model.EngineerId })</button>
+<button class="btn btn-success">@Html.ActionLink("Back to home page", "Index", "Home")</button>
