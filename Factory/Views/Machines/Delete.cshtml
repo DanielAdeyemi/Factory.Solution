@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h3>Are you sure you want to remove @Model.MachineName?</h3>
+
+@using (Html.BeginForm())
+{
+  <button type="submit" class="btn btn-danger"> Yes </button>
+}
+<button class="btn btn-info">@Html.ActionLink("No, return to list of Machines", "Index")</button>
