@@ -1,0 +1,32 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine;
+
+<h3>Engineers who have licence to maintain/repair @Model.MachineName: </h3>
+<hr />
+@if (Model.JoinEntities.Count == 0)
+{
+  <h5>@Model.MachineName doesn't have any licenced engineers yet.</h5>    
+}
+else
+{
+  <ul>
+    @foreach (var join in Model.JoinEntities)
+    {
+      <li>@join.Engineer.EngineerName
+      @using (Html.BeginForm("DeleteEngineer", "Engineers"))
+    {
+      @Html.Hidden("joinId", @join.EngineerMachineId)
+      <button class="btn btn-danger" type="submit">Remove @join.Engineer.EngineerName from this machine</button>
+    }
+      </li>
+    }
+  </ul>
+}
+
+
+<button class="btn btn-info">@Html.ActionLink("Back to list of Machines", "Index")</button>
+<button class="btn btn-danger">@Html.ActionLink("Remove this machine", "Delete", new { id = Model.MachineId })</button>
+<button class="btn btn-success">@Html.ActionLink("Back to home page", "Index", "Home")</button>
