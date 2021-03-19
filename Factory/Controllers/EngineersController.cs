@@ -58,10 +58,10 @@ namespace Factory.Controllers
     {
       if(MachineId != 0)
       {
-        _db.EngineerMachine.Add(new EngineerMachine() { EngineerId = engineer.EngineerId, MachineId = MachineId});
+        _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId});
+        _db.SaveChanges();
       }
-      _db.SaveChanges();
-      return RedirectToAction("Details");
+      return RedirectToAction("Index");
     }
   }
 }
