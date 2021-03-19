@@ -89,5 +89,12 @@ namespace Factory.Controllers
       Machine machine = _db.Machines.FirstOrDefault(machine => machine.MachineId == id);
       return View(machine);
     }
+    [HttpPost]
+    public ActionResult Edit(Machine machine)
+    {
+      _db.Entry(machine).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }

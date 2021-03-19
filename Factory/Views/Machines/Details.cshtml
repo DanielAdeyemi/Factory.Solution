@@ -27,6 +27,7 @@ else
 }
 
 <button class="btn btn-dark">@Html.ActionLink($"Add engineer to {Model.MachineName}", "AddEngineer", new { id = Model.MachineId})</button>
+<button class="btn btn-dark">@Html.ActionLink($"Edit info about {Model.MachineName}", "Edit", new { id = Model.MachineId})</button>
 <button class="btn btn-info">@Html.ActionLink("Back to list of Machines", "Index")</button>
 <button class="btn btn-danger">@Html.ActionLink("Remove this machine", "Delete", new { id = Model.MachineId })</button>
 <button class="btn btn-success">@Html.ActionLink("Back to home page", "Index", "Home")</button>
