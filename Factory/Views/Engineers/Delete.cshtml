@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h3>Are you sure you want to remove @Model.EngineerName?</h3>
+
+@using (Html.BeginForm())
+{
+  <button type="submit" class="btn btn-danger"> Yes </button>
+}
+<button class="btn btn-dark">@Html.ActionLink("No, return to Engineers", "Home")</button>
