@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h3>Add a license</h3>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.EngineerId)
+  @Html.Label($"Select machine to add: ")
+  @Html.DropDownList("MachineId")
+  <button class="btn btn-warning" type="submit">Add license</button>
+}
+
+<button class="btn btn-info">@Html.ActionLink("Back to list of Engineers", "Index")</button>
+<button class="btn btn-info">@Html.ActionLink("To the list of machines", "Index", "Machines")</button>
+<button class="btn btn-success">@Html.ActionLink("Back to home page", "Index", "Home")</button>
