@@ -27,7 +27,7 @@ ___
 <a name="setup"></a>
 ## <div align="center"> 🔧 *Setup/Installation instructions:*
 #### 🌐 From the web:
-* Go to my GitHub repository, using following [URL](https://github.com/DanielAdeyemi/HairSalon.Solution.git).
+* Go to my GitHub repository, using following [URL](https://github.com/DanielAdeyemi/Factory.Solution.git).
 * * At the top of the repository, click <img src="https://i.imgur.com/Ej9Dphm.png" alt="Code Button" height="20" align="center" /> then select "Download ZIP".
 
 <img src="https://i.imgur.com/tZKvGne.gif" alt="download zip gif" height="200"/>
@@ -70,7 +70,7 @@ ___
 <a name="view"></a>
 
 ### <div align="center">  🖥️ View website:
-*GitHub page is not available for this project. To view functionality you need to run `dotnet run` from **HairSalon** folder. After that you will see `http://localhost:5000`, click on that link and it will open web appliction in your default browser. In order to exit from local host use **Ctrl+C** command.*
+*GitHub page is not available for this project. To view functionality you need to run `dotnet run` from **Factory** folder. After that you will see `http://localhost:5000`, click on that link and it will open web appliction in your default browser. In order to exit from local host use **Ctrl+C** command.*
 
 <a name="technology"></a>
 
