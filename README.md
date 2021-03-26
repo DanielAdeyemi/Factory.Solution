@@ -52,7 +52,7 @@ ___
 }
 ```
 ⚠️ *Note: Don't include **[ ]** around your username or password in any of the examples above.*    
-***If you need to set up SQL database from scratch - click on details below:***
+***If you need to set up SQL database - click on details below:***
 <details>
 <summury>Details to set up DB </summary>
 
@@ -64,7 +64,10 @@ ___
 - Enter the name of your database   
 - Click ok   
 - Click Start Import   
-- Reopen the Navigator > Schemas tab and refresh the schemas(using `Refresh All`). 
+- Reopen the Navigator > Schemas tab and refresh the schemas(using `Refresh All`).    
+ *If you already have everything set up and want to use Migrations from this project (**Highly recommended!**), follow steps below*:
+- run `dotnet restore` to restore all necessary packages
+- run `dotnet ef database update` to apply database structure from the migrations (***make sure you are inside Factory directory!***)
 </details>
 
 <a name="view"></a>
